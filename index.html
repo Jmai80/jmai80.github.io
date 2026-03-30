@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spel</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #121213;
+        color: #ffffff;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 40px 16px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        margin-bottom: 8px;
+      }
+
+      header p {
+        color: #ccc;
+        font-size: 1.1rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+      }
+
+      .card {
+        background-color: #1a1a1b;
+        border-radius: 8px;
+        padding: 28px 24px;
+        text-decoration: none;
+        color: #ffffff;
+        border: 2px solid #3a3a3c;
+        transition: border-color 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .card:hover {
+        border-color: #538d4e;
+        transform: translateY(-4px);
+      }
+
+      .card-emoji {
+        font-size: 2.5rem;
+      }
+
+      .card-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+        color: #ccc;
+        line-height: 1.5;
+      }
+
+      .card-tag {
+        display: inline-block;
+        margin-top: 4px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        background-color: #3a3a3c;
+        color: #ccc;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🎮 SPEL</h1>
+      <p>Välj ett spel för att börja!</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="https://jmai80.github.io/wordle">
+        <span class="card-emoji">📝</span>
+        <span class="card-title">Wordle</span>
+        <span class="card-description">Gissa det hemliga svenska ordet på 6 försök!</span>
+        <span class="card-tag">Svenska</span>
+      </a>
+
+      <a class="card" href="https://jmai80.github.io/cityguess">
+        <span class="card-emoji">🌍</span>
+        <span class="card-title">CityGuess</span>
+        <span class="card-description">Gissa staden bakom det berömda landmärket!</span>
+        <span class="card-tag">Geografi</span>
+      </a>
+    </div>
+  </body>
+</html>
